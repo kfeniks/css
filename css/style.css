@@ -75,3 +75,18 @@ hr{
     font-size: 22px;
     letter-spacing: 1px;
 }
+
+#headerwrap{
+    background: url(../images/slide-1.jpg) no-repeat center top;
+    padding-top: 75px;
+    text-align: center;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 500px;
+    width: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+

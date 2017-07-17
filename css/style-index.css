@@ -1,0 +1,31 @@
+@media screen { /* Стиль для отображения в браузере */
+    BODY {
+        font-family: Arial, Verdana, sans-serif; /* Рубленый шрифт */
+        font-size: 90%; /* Размер шрифта */
+        color: #000080; /* Цвет текста */
+    }
+    H1 {
+        background: #faf0e6; /* Цвет фона */
+        border: 2px dashed maroon; /* Рамка вокруг заголовка */
+        color: #a0522d; /* Цвет текста */
+        padding: 7px; /* Поля вокруг текста */
+    }
+    H2 {
+        color: #556b2f; /* Цвет текста */
+        margin: 0; /* Убираем отступы */
+    }
+    P {
+        margin-top: 0.5em; /* Отступ сверху */
+    }
+    header{
+        width: 40%;
+    }
+}
+@media print { /* Стиль для печати */
+    BODY {
+        font-family: Times, 'Times New Roman', serif; /* Шрифт с засечками */
+    }
+    H1, H2, P {
+        color: black; /* Чёрный цвет текста */
+    }
+}
