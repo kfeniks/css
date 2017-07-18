@@ -8,6 +8,17 @@
             background: yellow; /* Желтый цвет фона */
         }
         [class~="block"] h3 { color: green; }
+        DIV[class|="block"] {
+            background: #306589; /* Цвет фона */
+            color: #acdb4c; /* Цвет текста */
+            padding: 5px; /* Поля */
+        }
+        DIV[class|="block"] A {
+            color: #fff; /* Цвет ссылок */
+        }
+        [id="more"][title]:after{
+            content: "\2603";
+        }
     </style>
 </head>
 <body>
@@ -17,6 +28,22 @@
 
 <div class="block tag">
     <h3>Заголовок</h3>
+</div>
+
+
+<div class="block-menu-therm">
+    <h2>Термины</h2>
+    <div class="content">
+        <ul class="menu">
+            <li><a href="t1.html">Буквица</a></li>
+            <li id="more"><a href="t2.html">Выворотка</a></li>
+            <li><a href="t3.html">Выключка</a></li>
+            <li><a href="t4.html">Интерлиньяж</a></li>
+            <li><a href="t5.html">Капитель</a></li>
+            <li id="more" title="Великолепно"><a href="t6.html">Начертание</a></li>
+            <li><a href="t7.html">Отбивка</a></li>
+        </ul>
+    </div>
 </div>
 </body>
 </html>
