@@ -15,6 +15,13 @@
             background: url(images/map_pin_floating-16.png) 0 3px no-repeat; /* Параметры фонового рисунка */
             padding-left: 15px; /* Смещаем текст вправо */
         }
+        A[href^="http://"] {
+            font-weight: bold /* Жирное начертание */
+        }
+        A[href$=".ru"] { /* Если ссылка заканчивается на .ru */
+            background: url(images/ru.png) no-repeat 0 1px; /* Добавляем фоновый рисунок */
+            padding-left: 19px; /* Смещаем текст вправо */
+        }
     </style>
 </head>
 <body>
@@ -28,5 +35,9 @@
     <a href="1.html">Обычная ссылка</a> |
     <a href="link2" target="_blank">Ссылка в новом окне</a>
 </p>
+
+<p><a href="1.html">Обычная ссылка</a> |
+    <a href="http://htmlbook.ru" target="_blank">Внешняя
+        ссылка на сайт htmlbook.ru</a></p>
 </body>
 </html>
