@@ -2,9 +2,156 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Применение псевдокласса</title>
+    <style>
+        INPUT:focus {
+            color: red; /* Красный цвет текста */
+        }
+        A {
+            color: #036; /* Цвет непосещенных ссылок */
+        }
+        A:visited {
+            color: #606; /* Цвет посещенных ссылок */
+        }
+        A:hover {
+            color: #f00; /* Цвет ссылок при наведении на них курсора мыши */
+        }
+        A:active {
+            color: #ff0; /* Цвет активных ссылок */
+        }
+        table { border-spacing: 0; }
+        td { padding: 4px; }
+        tr:hover {
+            background: #fc0; /* Меняем цвет фона строки таблицы */
+        }
+
+        B:first-child {
+            color: red; /* Красный цвет текста */
+        }
+
+        div P {
+            text-indent: 1em; /* Отступ первой строки */
+        }
+        div P:first-child {
+            text-indent: 0; /* Для первого абзаца отступ убираем */
+        }
+        .lang P {
+            font-size: 150%; /* Размер текста */
+        }
+        .lang q:lang(de) {
+            quotes: "\201E" "\201C"; /* Вид кавычек для немецкого языка */
+        }
+        .lang q:lang(en) {
+            quotes: "\201C" "\201D"; /* Вид кавычек для английского языка */
+        }
+        .lang q:lang(fr), q:lang(ru) { /* Вид кавычек для русского и французского языка */
+            quotes: "\00AB" "\00BB";
+        }
+
+        .lang p:first-letter { color: red }
+
+        P.new:after {
+            content: " - Свежее!"; /* Добавляем после текста абзаца */
+        }
+        .first{
+            width: 500px;
+        }
+        .first P:first-line {
+            color: red; /* Красный цвет текста */
+            font-style: italic; /* Курсивное начертание */
+        }
+    </style>
 </head>
 <body>
-$END$
+<form action="">
+    <p><input type="text" value="Черный текст"></p>
+    <p><input type="text" value="Черный текст"></p>
+</form>
+
+<p>
+    <a href="1.html">Ссылка 1</a> |
+    <a href="2.html">Ссылка 2</a> |
+    <a href="3.html">Ссылка 3</a></p>
+
+<table width="400" border="1">
+    <tr>
+        <th></th>
+        <th>Пики</th>
+        <th>Трефы</th>
+        <th>Бубны</th>
+        <th>Червы</th>
+    </tr>
+    <tr>
+        <td>Чебурашка</td>
+        <td>5</td><td>2</td><td>4</td><td>2</td>
+    </tr>
+    <tr>
+        <td>Крокодил Гена</td>
+        <td>2</td><td>7</td><td>1</td><td>3</td>
+    </tr>
+    <tr>
+        <td>Шапокляк</td>
+        <td>5</td><td>4</td><td>3</td><td>1</td>
+    </tr>
+    <tr>
+        <td>Крыса Лариса</td>
+        <td>1</td><td>0</td><td>5</td><td>7</td>
+    </tr>
+</table>
+
+<p><b>Lorem ipsum</b> dolor sit amet, <b>consectetuer</b>
+    adipiscing <b>elit</b>, sed diem nonummy nibh euismod tincidunt
+    ut lacreet dolore magna aliguam erat volutpat.</p>
+
+<p><b>Ut wisis enim</b> ad minim veniam, <b>quis nostrud</b>
+    exerci tution ullamcorper suscipit lobortis nisl ut aliquip ex ea <b>commodo
+        consequat</b>.</p>
+
+<div>
+    <p>Историю эту уже начали забывать, хотя находились горожане, которые
+        время от времени рассказывали ее вновь прибывшим в город посетителям.</p>
+    <p>Легенда обрастала подробностями и уже совсем не напоминала произошедшее
+        в действительности событие. И, тем не менее, ни один человек не решался
+        заикнуться о ней с наступлением темноты.</p>
+    <p>Но однажды в город вновь вошел незнакомец. Он хромал на левую ногу.</p>
+</div>
+<script>
+    document.write('привет'+"<br>");
+    var one = 100, two = 200;
+    document.write(one+two+"<br>");
+    document.write(one*two+"<br>");
+    document.write("Я все понял, \
+    пошел учить дальше");
+</script>
+<div class="lang">
+    <p>Цитата на французском языке: <q lang="fr">Ce que femme veut,
+        Dieu le veut</q>.</p>
+    <p>Цитата на немецком: <q lang="de">Der Mensch, versuche die Gotter nicht</q>.</p>
+    <p>Цитата на английском: <q lang="en">То be or not to be</q>.</p>
+</div>
+
+<p class="new">Ловля льва в пустыне с помощью метода золотого сечения.</p>
+<p>Метод ловли льва простым перебором.</p>
+
+<div class="first">
+    <p>Интересно, а существует ли способ действительно практичного применения
+        свойства first-line? Нет, не такого, чтобы можно было бы показать, что это
+        возможно, а чтобы воистину захватило дух от красоты решения, загорелись глаза от
+        скрытых перспектив, после чего остается только сказать себе, что вот это вот, это
+        самое сделать по-другому, также изящно и эффектно просто невозможно.</p>
+</div>
+
+<script>
+    var one_value = "Привет, друг!"; /* Храним строку */
+    var one_value_2 = 'Привет, друг!'; /* Храним строку, но уже в других кавычках */
+    var two_value = 123; /* Храним число */
+    var three_value = "123"; /* А это уже строка */
+    alert(two_value);
+    alert(one_value_2);
+
+    for (var i = 0; i < 3; i++) {
+        alert(i);
+    }
+</script>
 </body>
 </html>
