@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Приемы css 1. Цвета и блок по центру</title>
+    <style>
+        BODY {
+            background-color: #3366CC; /* Цвет фона веб-страницы */
+        }
+        H1 {
+            background-color: RGB(249, 201, 16); /* Цвет фона под заголовком */
+            text-align: center;
+        }
+        P {
+            background-color: maroon; /* Цвет фона под текстом абзаца */
+            color: white; /* Цвет текста */
+            text-align: justify; /* Выравнивание по ширине */
+        }
+        P.cite { /* Абзац с классом cite */
+            color: grey; /* Цвет текста */
+            margin-left: 20px; /* Отступ слева */
+            border-left: 1px solid navy; /* Граница слева от текста */
+            padding-left: 15px; /* Расстояние от линии до текста */
+        }
+        .term {
+            border-bottom: 1px dashed #5cb85c; /* Подчеркивание под текстом */
+        }
+        .gost {
+            color: green; /* Цвет текста */
+            font-weight: bold; /* Жирное начертание */
+        }
+        .center{
+            top: 50%; /* Отступ в процентах от верхнего края окна */
+            left: 50%; /* Отступ в процентах от левого края окна */
+            width: 450px; /* Ширина блока */
+            height: 450px; /* Высота блока */
+            background-color: cornsilk;
+            position: absolute; /* Абсолютное позиционирование блока */
+            margin-top: -225px; /* Отрицательный отступ от верхнего края страницы, должен равняться половине высоты блока со знаком минус */
+            margin-left: -225px; /* Отрицательный отступ от левого края страницы, должен равняться половине высоты блока со знаком минус */
+        }
+    </style>
+</head>
+<body>
+<div class="center">
+<h1>Lorem ipsum dolor sit amet</h1>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem
+    nonummy nibh euismod tincidunt ut <b class="term">lacreet</b> dolore magna aliguam erat volutpat.</p>
+    <p class="cite">Для <span class="gost">исключения засветки экрана</span> дисплея световыми потоками
+        оконные проемы снабжены светорассеивающими шторами.</p>
+</div>
+</body>
+</html>
