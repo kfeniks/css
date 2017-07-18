@@ -21,6 +21,20 @@
             margin-top: 0.5em; /* Отступ сверху */
             padding: 7px; /* Поля вокруг текста */
         }
+
+        H1 + H2 {
+            margin-top: -10px; /* Смещаем заголовок 2 вверх */
+        }
+        H2 + P {
+            margin-top: -1em; /* Смещаем первый абзац вверх к заголовку */
+        }
+
+        DIV I { /* Контекстный селектор */
+            color: green; /* Зеленый цвет текста */
+        }
+        P > I { /* Дочерний селектор */
+            color: red; /* Красный цвет текста */
+        }
     </style>
 </head>
 <body>
@@ -44,5 +58,9 @@
 <p>Далее последовательно накрываем каждый из размеченных прямоугольников
     пустыни клеткой и проверяем, пойман лев или нет. Как только лев окажется в
     клетке, процедура поимки считается завершенной.</p>
+
+<p><i>Lorem ipsum dolor sit amet</i>, consectetuer adipiscing
+    elit, sed diem nonummy nibh euismod tincidunt ut lacreet <i>dolore magna</i>
+    aliguam erat volutpat.</p>
 </body>
 </html>
